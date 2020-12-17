@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/Imagens">
+        <file>Icons/CutBox.png</file>
+        <file>Icons/CutElipsoide.png</file>
+        <file>Icons/CutSphere.png</file>
+        <file>Icons/CutVoxel.png</file>
+        <file>Icons/PutBox.png</file>
+        <file>Icons/PutElipsoide.png</file>
+        <file>Icons/PutSphere.png</file>
+        <file>Icons/PutVoxel.png</file>
+    </qresource>
+</RCC>
