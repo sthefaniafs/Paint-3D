@@ -57,3 +57,84 @@ void Plotter:: mudaplano(int _dimz)
     dimz=_dimz;
     repaint();
 }
+
+void Plotter::mouseMoveEvent(QMouseEvent *event)
+{
+    dimx=event->x();
+    dimy=event->y();
+    int linha=width()/nx;
+    int coluna=height()/ny;
+    dimx=(dimx/linha);
+    dimy=(dimy/coluna);
+
+    if(putvoxel){
+        s->setColor(r,g,b,1);
+        s->putVoxel(dimx,dimy,dimz);
+    }
+    if(cutvoxel){
+        s->cutVoxel(dimx,dimy,dimz);
+    }
+    if(putbox){
+        s->setColor(r,g,b,1);
+        s->putBox(dimx,dimx+x1-1,dimy,dimy+y1-1,dimz,dimz+z1-1);
+    }
+    if(cutbox){
+        s->cutBox(dimx,dimx+x1,dimy,dimy+y1,dimz,dimz+z1);
+    }
+    if(putsphere){
+        s->setColor(r,g,b,1);
+        s->putSphere(dimx,dimy,dimz,RaioS);
+    }
+    if(cutsphere){
+        s->cutSphere(dimx,dimy,dimz,RaioS);
+    }
+    if(putellipsoid){
+        s->setColor(r,g,b,1);
+        s->putEllipsoid(dimx,dimy,dimz,xr,yr,zr);
+    }
+    if(cutellipsoid){
+        s->cutEllipsoid(dimx,dimy,dimz,xr,yr,zr);
+    }
+    repaint();
+}
+
+void Plotter::mousePressEvent(QMouseEvent *event)
+{
+
+    dimx=event->x();
+    dimy=event->y();
+    int linha=width()/nx;
+    int coluna=height()/ny;
+    dimx=(dimx/linha);
+    dimy=(dimy/coluna);
+
+    if(putvoxel){
+        s->setColor(r,g,b,1);
+        s->putVoxel(dimx,dimy,dimz);
+    }
+    if(cutvoxel){
+        s->cutVoxel(dimx,dimy,dimz);
+    }
+    if(putbox){
+        s->setColor(r,g,b,1);
+        s->putBox(dimx,dimx+x1-1,dimy,dimy+y1-1,dimz,dimz+z1-1);
+    }
+    if(cutbox){
+        s->cutBox(dimx,dimx+x1,dimy,dimy+y1,dimz,dimz+z1);
+    }
+    if(putsphere){
+        s->setColor(r,g,b,1);
+        s->putSphere(dimx,dimy,dimz,RaioS);
+    }
+    if(cutsphere){
+        s->cutSphere(dimx,dimy,dimz,RaioS);
+    }
+    if(putellipsoid){
+        s->setColor(r,g,b,1);
+        s->putEllipsoid(dimx,dimy,dimz,xr,yr,zr);
+    }
+    if(cutellipsoid){
+        s->cutEllipsoid(dimx,dimy,dimz,xr,yr,zr);
+    }
+    repaint();
+}

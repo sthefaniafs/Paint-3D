@@ -2,7 +2,9 @@
 #define PLOTTER_H
 
 #include <QWidget>
+#include <QAction>
 #include "sculptor.h"
+#include <QMouseEvent>
 
 class Plotter : public QWidget
 {
@@ -11,14 +13,19 @@ public:
     explicit Plotter(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
     void mudaplano (int _dimz);
+<<<<<<< HEAD
 
+=======
+    void mouseMoveEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
+>>>>>>> 3626dd9dc681ee3deded3c3812d939f8f01bfbf1
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;
         float r=0,g=0,b=0;
         int nx=10,ny=10,nz=10;
         int x1=0,y1=0,z1=0;
         int RaioS=0;
-        int xraios=0,yraios=0,zraios=0;
+        int xr=0,yr=0,zr=0;
         bool putvoxel=false;
         bool cutvoxel=false;
         bool putbox=false;
