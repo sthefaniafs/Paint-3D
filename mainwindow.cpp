@@ -96,7 +96,7 @@ void MainWindow::put_elipse()
 void MainWindow::put_esfera()
 {
     ui->widget->Novo_PutSphere(getRaioSphere());
-    ui->widget->plot_CutSphere();
+    ui->widget->plot_PutSphere();
     repaint();
 }
 
