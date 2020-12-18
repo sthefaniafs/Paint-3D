@@ -5,7 +5,7 @@
 
 Plotter::Plotter(QWidget *parent) : QWidget(parent)
 {
-    s = new Sculptor (10,10,10);
+    s = new Sculptor (100,100,100);
 }
 
     void Plotter::paintEvent(QPaintEvent *event)
@@ -16,11 +16,9 @@ Plotter::Plotter(QWidget *parent) : QWidget(parent)
 
     brush.setColor(QColor(255,255,255));
     brush.setStyle(Qt::SolidPattern);
-
     pen.setColor(QColor(0,0,0));
     pen.setWidth(1);
     pen.setStyle(Qt::SolidLine);
-
     painter.setPen(pen);
     painter.setBrush(brush);
 
@@ -86,7 +84,7 @@ void Plotter::Novo_PutEllipsoid(int raioX, int raioY, int raioZ)
     zr=raioZ;
 }
 
-void Plotter::Novo_Colors(int nr, int ng, int nb)
+void Plotter::Novo_Colors(float nr, float ng, float nb)
 {
     r=nr;
     g=ng;

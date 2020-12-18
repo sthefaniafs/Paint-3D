@@ -95,7 +95,7 @@ void MainWindow::put_elipse()
 void MainWindow::put_esfera()
 {
     ui->widget->Novo_PutSphere(getRaioSphere());
-    ui->widget->plot_CutSphere();
+    ui->widget->plot_PutSphere();
     repaint();
 }
 
@@ -106,17 +106,24 @@ void MainWindow::cut_voxel()
 
 void MainWindow::cut_box()
 {
-
+    Dimensao d;
+    ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
+    ui->widget->plot_CutBox();
+    repaint();
 }
 
 void MainWindow::cut_elipse()
 {
-
+    ui->widget->Novo_PutEllipsoid(getRaioElipseX(),getRaioElipseY(),getRaioElipseZ());
+    ui->widget->plot_CutEllipsoid();
+    repaint();
 }
 
 void MainWindow::cut_esfera()
 {
-
+    ui->widget->Novo_PutSphere(getRaioSphere());
+    ui->widget->plot_CutSphere();
+    repaint();
 }
 
 void MainWindow::abreMatriz()
@@ -193,5 +200,5 @@ int MainWindow::getRaioSphere()
 }
 void MainWindow::bota_cor()
 {
-    ui->widget->Novo_Colors(getCorR(),getCorG(),getCorB());
+    ui->widget->Novo_Colors((float)getCorR(),(float)getCorG(),(float)getCorB());
 }
