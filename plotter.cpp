@@ -8,7 +8,7 @@ Plotter::Plotter(QWidget *parent) : QWidget(parent)
     s = new Sculptor (10,10,10);
 }
 
-void Plotter::paintEvent(QPaintEvent *event)
+    void Plotter::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
     QBrush brush;
@@ -86,11 +86,11 @@ void Plotter::Novo_PutEllipsoid(int raioX, int raioY, int raioZ)
     zr=raioZ;
 }
 
-void Plotter::Novo_Colors(int cr, int cg, int cb)
+void Plotter::Novo_Colors(int nr, int ng, int nb)
 {
-    r=cr;
-    g=cg;
-    b=cb;
+    r=nr;
+    g=ng;
+    b=nb;
 }
 
 void Plotter::plot_PutVoxel()
