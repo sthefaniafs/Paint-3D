@@ -214,7 +214,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
      <string>Região</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>770</x>
@@ -283,7 +283,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
      </item>
     </layout>
    </widget>
-   <widget class="QGroupBox" name="">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>770</x>
@@ -335,7 +335,7 @@ color: rgb(0, 0, 0);
      </item>
     </layout>
    </widget>
-   <widget class="QGroupBox" name="">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
       <x>770</x>
@@ -457,6 +457,16 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>19</x>
+      <y>9</y>
+      <width>711</width>
+      <height>421</height>
+     </rect>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

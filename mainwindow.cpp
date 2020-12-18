@@ -1,5 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "dimensao.h"
+#include <QtDebug>
+#include <QtWidgets>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -43,6 +47,14 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(clicked(bool)),
             this,
             SLOT(cut_esfera()));
+    connect(ui->actionAlterar_Tamanho_da_Matriz,
+            SIGNAL(triggered(bool)),
+            this,
+            SLOT(abreMatriz()));
+    connect(ui->horizontalSliderz,
+                SIGNAL(valueChanged(int)),
+                this,
+                SLOT(mudandoZ(int)));
 
 
 }
@@ -94,6 +106,35 @@ void MainWindow::cut_elipse()
 
 void MainWindow::cut_esfera()
 {
+
+}
+
+void MainWindow::abreMatriz()
+{
+    Dimensao d;
+      if( d.exec() == QDialog::Accepted){
+        qDebug() << "ok ->" << d.getX();
+      }
+      else if( d.exec() == QDialog::Accepted){
+         qDebug() << "ok ->" << d.getY();
+      }
+      else if( d.exec() == QDialog::Accepted){
+         qDebug() << "ok ->" << d.getZ();
+      }
+      else if (d.exec()== QDialog::Rejected){
+         qDebug() << "cancel -> " << d.getX();
+      }
+      else if (d.exec()== QDialog::Rejected){
+         qDebug() << "cancel -> " << d.getY();
+      }
+      else if (d.exec()== QDialog::Rejected){
+         qDebug() << "cancel -> " << d.getZ();
+      }
+}
+
+void MainWindow::mudandoZ(int z){
+
+    ui->widget->mudaplano(z);
 
 }
 

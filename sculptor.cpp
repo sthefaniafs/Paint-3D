@@ -278,3 +278,23 @@ void Sculptor::writeOFF(char* filename)
 
     fout.close();
 }
+
+bool Sculptor::getis0n(int x, int y, int z)
+{
+    return v[x][y][z].isOn;
+}
+
+float Sculptor::getR(int i, int j, int k)
+{
+    return v[i][j][k].r;
+}
+
+float Sculptor::getG(int i, int j, int k)
+{
+    return v[i][j][k].g;
+}
+
+float Sculptor::getB(int i, int j, int k)
+{
+    return v[i][j][k].b;
+}

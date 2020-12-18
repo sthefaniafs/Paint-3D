@@ -1,11 +1,12 @@
 #include "plotter.h"
+#include "sculptor.h"
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
 
 Plotter::Plotter(QWidget *parent) : QWidget(parent)
 {
-
+    s = new Sculptor (10,10,10);
 }
 
 void Plotter::paintEvent(QPaintEvent *event)
@@ -29,25 +30,31 @@ void Plotter::paintEvent(QPaintEvent *event)
 
     int inicio_x=0,inicio_y=0;
         for (int i=1;i<=ny;i++) {
-            contx=0;
+            inicio_x=0;
             for (int j=1;j<=nx;j++) {
                 painter.drawRect(inicio_x,inicio_y,width()/nx,height()/ny);
-                contx+=(float)(width()/nx);
+                inicio_x+=(float)(width()/nx);
             }
-            conty+=(float)(height()/ny);
+            inicio_y+=(float)(height()/ny);
         }
 
         for(int i=0;i<nx;i++)
         {
             for(int j=0;j<ny;j++)
             {
-                if(sculptor->getisOn(i,j,Dz))
+                if(s->getis0n(i,j,dimz))
                 {
-                    brush.setColor(QColor(sculptor->getR(i,j,Dz)*255,sculptor->getG(i,j,Dz)*255,sculptor->getB(i,j,Dz)*255));
+                    brush.setColor(QColor(s->getR(i,j,dimz)*255,s->getG(i,j,dimz)*255,s->getB(i,j,dimz)*255));
                     painter.setBrush(brush);
-                    painter.drawRect(i*(larg/nx),j*(alt/ny),larg/nx,alt/ny);
+                    painter.drawRect(i*(largura_tela/nx),j*(altura_tela/ny),largura_tela/nx,altura_tela/ny);
                 }
             }
         }
 
+}
+
+void Plotter:: mudaplano(int _dimz)
+{
+    dimz=_dimz;
+    repaint();
 }

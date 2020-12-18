@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -25,6 +26,8 @@ public slots:
     void cut_box();
     void cut_elipse();
     void cut_esfera();
+    void abreMatriz(void);
+    void mudandoZ(int z);
 
 
 private:
