@@ -80,7 +80,6 @@ void MainWindow::put_voxel()
 
 void MainWindow::put_box()
 {
-    Dimensao d;
     ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
     ui->widget->plot_PutBox();
     repaint();
@@ -102,12 +101,12 @@ void MainWindow::put_esfera()
 
 void MainWindow::cut_voxel()
 {
-
+    ui->widget->plot_CutVoxel();
+    repaint();
 }
 
 void MainWindow::cut_box()
 {
-    Dimensao d;
     ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
     ui->widget->plot_CutBox();
     repaint();
@@ -169,15 +168,15 @@ int MainWindow::getBoxZ()
 {
    return ui->horizontalBZ->value();
 }
-int MainWindow:: getCorR()
+float MainWindow:: getCorR()
 {
     return ui->horizontalSliderVermelho->value();
 }
-int MainWindow:: getCorG()
+float MainWindow:: getCorG()
 {
     return ui->horizontalSliderVerde->value();
 }
-int MainWindow:: getCorB()
+float MainWindow:: getCorB()
 {
     return ui->horizontalSliderAzul->value();
 }

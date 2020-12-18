@@ -126,11 +126,11 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
     mesmas duas condições. */
 
     int px=0,py=0,pz=0;
-    for(int i=(xcenter-radius); i<(xcenter+radius); i++)
+    for(int i=(xcenter-radius); i<=(xcenter+radius); i++)
     {
-        for(int j=(ycenter-radius); j<(ycenter+radius); j++)
+        for(int j=(ycenter-radius); j<=(ycenter+radius); j++)
         {
-            for(int k=(zcenter-radius); k<(zcenter+radius); k++)
+            for(int k=(zcenter-radius); k<=(zcenter+radius); k++)
             {
                 px=i-xcenter;
                 py=j-ycenter;
