@@ -67,6 +67,128 @@ void Plotter::mudaSculptor(int s_x, int s_y, int s_z)
     s = new Sculptor(nx,ny,nz);
 }
 
+void Plotter::Novo_PutBox(int dx, int dy, int dz)
+{
+    x1=dx;
+    y1=dy;
+    z1=dz;
+}
+
+void Plotter::Novo_PutSphere(int r)
+{
+    RaioS=r;
+}
+
+void Plotter::Novo_PutEllipsoid(int raioX, int raioY, int raioZ)
+{
+    xr=raioX;
+    yr=raioY;
+    zr=raioZ;
+}
+
+void Plotter::Novo_Colors(int cr, int cg, int cb)
+{
+    r=cr;
+    g=cg;
+    b=cb;
+}
+
+void Plotter::plot_PutVoxel()
+{
+    putvoxel = true;
+    cutvoxel = false;
+    putbox = false;
+    cutbox =  false;
+    putsphere = false;
+    cutsphere = false;
+    putellipsoid = false;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_CutVoxel()
+{
+    putvoxel = false;
+    cutvoxel = true;
+    putbox = false;
+    cutbox =  false;
+    putsphere = false;
+    cutsphere = false;
+    putellipsoid = false;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_PutBox()
+{
+    putvoxel = false;
+    cutvoxel = false;
+    putbox = true;
+    cutbox =  false;
+    putsphere = false;
+    cutsphere = false;
+    putellipsoid = false;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_CutBox()
+{
+    putvoxel = false;
+    cutvoxel = false;
+    putbox = false;
+    cutbox =  true;
+    putsphere = false;
+    cutsphere = false;
+    putellipsoid = false;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_PutSphere()
+{
+    putvoxel = false;
+    cutvoxel = false;
+    putbox = false;
+    cutbox =  false;
+    putsphere = true;
+    cutsphere = false;
+    putellipsoid = false;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_CutSphere()
+{
+    putvoxel = false;
+    cutvoxel = false;
+    putbox = false;
+    cutbox =  false;
+    putsphere = false;
+    cutsphere = true;
+    putellipsoid = false;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_PutEllipsoid()
+{
+    putvoxel = false;
+    cutvoxel = false;
+    putbox = false;
+    cutbox =  false;
+    putsphere = false;
+    cutsphere = false;
+    putellipsoid = true;
+    cutellipsoid = false;
+}
+
+void Plotter::plot_CutEllipsoid()
+{
+    putvoxel = false;
+    cutvoxel = false;
+    putbox = false;
+    cutbox =  false;
+    putsphere = false;
+    cutsphere = false;
+    putellipsoid = false;
+    cutellipsoid = true;
+}
+
 void Plotter::mouseMoveEvent(QMouseEvent *event)
 {
     dimx=event->x();

@@ -59,19 +59,6 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(valueChanged(int)),
             this,
             SLOT(mudandoZ(int)));
-    connect(ui->horizontalSliderz,
-            SIGNAL(valueChanged(int)),
-            this,
-            SLOT(mudandoZ(int)));
-    connect(ui->horizontalSliderz,
-            SIGNAL(valueChanged(int)),
-            this,
-            SLOT(mudandoZ(int)));
-    connect(ui->horizontalSliderz,
-            SIGNAL(valueChanged(int)),
-            this,
-            SLOT(mudandoZ(int)));
-
 
 }
 
@@ -92,7 +79,9 @@ void MainWindow::put_voxel()
 
 void MainWindow::put_box()
 {
-
+    ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
+    ui->widget->plot_PutBox();
+    repaint();
 }
 
 void MainWindow::put_elipse()
@@ -155,16 +144,25 @@ void MainWindow::mudandoZ(int _dimz){
 
 int MainWindow::getBoxX()
 {
+<<<<<<< HEAD
    return ui->horizontalBX->value();
+=======
+    return ui->horizontalBX->value();
+>>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
 }
 
 int MainWindow::getBoxY()
 {
+<<<<<<< HEAD
    return ui->horizontalBY->value();
+=======
+    return ui->horizontalBY->value();
+>>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
 }
 
 int MainWindow::getBoxZ()
 {
+<<<<<<< HEAD
    return ui->horizontalBZ->value();
 }
 int MainWindow:: getCorR()
@@ -178,4 +176,22 @@ int MainWindow:: getCorG()
 int MainWindow:: getCorB()
 {
     return ui->horizontalSliderAzul->value();
+=======
+    return ui->horizontalBZ->value();
 }
+int MainWindow::getRaioElipseX()
+{
+    return ui->horizontalSliderRaiox->value();
+>>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
+}
+
+int MainWindow::getRaioElipseY()
+{
+    return ui->horizontalSliderRaioy->value();
+}
+
+int MainWindow::getRaioElipseZ()
+{
+    return ui->horizontalSliderRaioz->value();
+}
+
