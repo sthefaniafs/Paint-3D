@@ -16,11 +16,11 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             SLOT(fecha()));
     connect(ui->actionColocar_Caixa,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(put_box()));
     connect(ui->actionColocar_Voxel,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(put_voxel()));
     connect(ui->actionColocar_elipse,
@@ -28,23 +28,23 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             SLOT(put_elipse()));
     connect(ui->actionColocar_esfera,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(put_esfera()));
     connect(ui->actionTirar_Caixa,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(cut_box()));
     connect(ui->actionTirar_Voxel,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(cut_voxel()));
     connect(ui->actionTirar_Elipse,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(cut_elipsoide()));
     connect(ui->actionTirar_esfera,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(cut_esfera()));
     connect(ui->actionAlterar_Tamanho_da_Matriz,
@@ -183,6 +183,10 @@ int MainWindow::getRaioElipseY()
 int MainWindow::getRaioElipseZ()
 {
     return ui->horizontalSliderRaioz->value();
+}
+int MainWindow::getRaioSphere()
+{
+    return ui->horizontalSliderEsfera->value();
 }
 void MainWindow::bota_cor()
 {

@@ -40,6 +40,7 @@ public slots:
     int getRaioElipseX();
     int getRaioElipseY();
     int getRaioElipseZ();
+    int getRaioSphere();
     void bota_cor();
 
 private:
