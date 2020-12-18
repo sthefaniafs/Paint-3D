@@ -15,6 +15,7 @@ public:
     void mudaplano (int _dimz);
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
+    void mudaSculptor(int s_x,int s_y, int s_z);
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;
         float r=0,g=0,b=0;

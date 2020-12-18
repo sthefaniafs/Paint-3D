@@ -28,6 +28,9 @@ public slots:
     void cut_esfera();
     void abreMatriz(void);
     void mudandoZ(int z);
+    int getBoxX();
+    int getBoxY();
+    int getBoxZ();
 
 
 private:

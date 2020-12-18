@@ -112,24 +112,15 @@ void MainWindow::cut_esfera()
 void MainWindow::abreMatriz()
 {
     Dimensao d;
-      if( d.exec() == QDialog::Accepted){
-        qDebug() << "ok ->" << d.getX();
-      }
-      else if( d.exec() == QDialog::Accepted){
-         qDebug() << "ok ->" << d.getY();
-      }
-      else if( d.exec() == QDialog::Accepted){
-         qDebug() << "ok ->" << d.getZ();
-      }
-      else if (d.exec()== QDialog::Rejected){
-         qDebug() << "cancel -> " << d.getX();
-      }
-      else if (d.exec()== QDialog::Rejected){
-         qDebug() << "cancel -> " << d.getY();
-      }
-      else if (d.exec()== QDialog::Rejected){
-         qDebug() << "cancel -> " << d.getZ();
-      }
+    if(d.exec()==QDialog::Accepted){
+           if(d.getX()!=0 && d.getY()!=0 && d.getZ()!=0){
+               ui->widget->mudaSculptor(d.getX(),d.getY(),d.getZ());
+               ui->horizontalSliderz->setMaximum(d.getZ());
+               repaint();
+           }else{
+               QMessageBox::information(this, tr("Vixi deu errado"),tr("\nAs dimensões precisam ser maiores que 0, tente outra vez!\n"));
+           }
+    }
 }
 
 void MainWindow::mudandoZ(int _dimz){
@@ -138,3 +129,17 @@ void MainWindow::mudandoZ(int _dimz){
 
 }
 
+int MainWindow::getBoxX()
+{
+    ui->spinBoxBoxX->value();
+}
+
+int MainWindow::getBoxY()
+{
+    ui->spinBoxBoxY->value();
+}
+
+int MainWindow::getBoxZ()
+{
+    ui->spinBoxBoxZ->value();
+}
