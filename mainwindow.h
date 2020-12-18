@@ -5,6 +5,10 @@
 #include <QString>
 #include <QDialog>
 #include "sculptor.h"
+#include <cstdlib>
+#include "plotter.h"
+#include "definircor.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -34,16 +38,14 @@ public slots:
     int getBoxX();
     int getBoxY();
     int getBoxZ();
-    int getCorR();
-    int getCorG();
-    int getCorB();
     int getRaioElipseX();
     int getRaioElipseY();
     int getRaioElipseZ();
     int getRaioSphere();
-    void bota_cor();
+    void coloca_cor();
 
 private:
     Ui::MainWindow *ui;
+    DefinirCor dialog_pc;
 };
 #endif // MAINWINDOW_H

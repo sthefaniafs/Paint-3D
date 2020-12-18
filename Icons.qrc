@@ -10,5 +10,6 @@
         <file>Icons/PutVoxel.png</file>
         <file>Icons/Salvar.PNG</file>
         <file>Icons/Tamanho.PNG</file>
+        <file>Icons/Cor.PNG</file>
     </qresource>
 </RCC>

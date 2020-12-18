@@ -56,11 +56,14 @@ void Sculptor::setColor(float r, float g, float b, float alpha)
 //Função membro que ativa o voxel na posição (x,y,z)e atribui a cor atual do desenho a ele
 void Sculptor::putVoxel(int x, int y, int z)
 {
-    v[x][y][z].isOn=true;
-    v[x][y][z].r=r;
-    v[x][y][z].g=g;
-    v[x][y][z].b=b;
-    v[x][y][z].a=a;
+    if(x>=0 && y>=0 && z>=0 && x<nx && y<ny && z<nz)
+    {
+        v[x][y][z].r = r;
+        v[x][y][z].g = g;
+        v[x][y][z].b = b;
+        v[x][y][z].a = a;
+        v[x][y][z].isOn = true;
+    }
 }
 //Função membro que desativa o voxel na posição (x,y,z)
 void Sculptor::cutVoxel(int x, int y, int z)

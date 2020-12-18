@@ -59,6 +59,14 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(valueChanged(int)),
             this,
             SLOT(mudandoZ(int)));
+    connect(ui->horizontalSliderz,
+            SIGNAL(valueChanged(int)),
+            this,
+            SLOT(mudandoZ(int)));
+    connect(ui->actionCor,
+            SIGNAL(triggered(bool)),
+            this,
+            SLOT(coloca_cor()));
 
 }
 
@@ -168,18 +176,6 @@ int MainWindow::getBoxZ()
 {
    return ui->horizontalBZ->value();
 }
-int MainWindow:: getCorR()
-{
-    return ui->horizontalSliderVermelho->value();
-}
-int MainWindow:: getCorG()
-{
-    return ui->horizontalSliderVerde->value();
-}
-int MainWindow:: getCorB()
-{
-    return ui->horizontalSliderAzul->value();
-}
 int MainWindow::getRaioElipseX()
 {
     return ui->horizontalSliderRaiox->value();
@@ -198,7 +194,13 @@ int MainWindow::getRaioSphere()
 {
     return ui->horizontalSliderEsfera->value();
 }
-void MainWindow::bota_cor()
+void MainWindow::coloca_cor()
 {
-    ui->widget->Novo_Colors((float)getCorR(),(float)getCorG(),(float)getCorB());
+    if(dialog_pc.exec()==QDialog::Accepted){
+        if(dialog_pc.getColorR()>=0 && dialog_pc.getColorR()<=255 && dialog_pc.getColorG()>=0 && dialog_pc.getColorG()<=255 && dialog_pc.getColorB()>=0 && dialog_pc.getColorB()<=255){
+            ui->widget->Novo_Colors(dialog_pc.getColorR(),dialog_pc.getColorG(),dialog_pc.getColorB());
+        }else{
+            QMessageBox::information(this, tr("Erro"),tr("\nvalores inválidos, tente outra vez!\n"));
+        }
+    }
 }

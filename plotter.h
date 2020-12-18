@@ -5,6 +5,8 @@
 #include <QAction>
 #include "sculptor.h"
 #include <QMouseEvent>
+#include <QString>
+#include <QFileDialog>
 
 class Plotter : public QWidget
 {

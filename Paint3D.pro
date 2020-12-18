@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    definircor.cpp \
     dimensao.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -17,12 +18,14 @@ SOURCES += \
 
 HEADERS += \
     Voxel.h \
+    definircor.h \
     dimensao.h \
     mainwindow.h \
     plotter.h \
     sculptor.h
 
 FORMS += \
+    definircor.ui \
     dimensao.ui \
     mainwindow.ui
 
