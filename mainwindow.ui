@@ -461,10 +461,17 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
+<<<<<<< HEAD
       <x>0</x>
       <y>0</y>
       <width>771</width>
       <height>401</height>
+=======
+      <x>19</x>
+      <y>9</y>
+      <width>711</width>
+      <height>421</height>
+>>>>>>> 32235e01a1ff395406ee00288636c0e58b677c2c
      </rect>
     </property>
    </widget>
