@@ -5,7 +5,7 @@ Projeto da Unidade 3 de Programação Avançada
   2. Sthefania Fernandes Silva.
   
 - **Orientações para o uso do programa:**
-  > Antes de tudo é necessário ter instalado no computador o software QT Creator.
+  > Antes de tudo, é necessário ter instalado no computador o software QT Creator.
   
   1. Clone o repositório Paint 3D
   2. Abra os arquivos do repositório utilizando o QT Creator
