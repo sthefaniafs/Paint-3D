@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
             this,
             SLOT(put_voxel()));
     connect(ui->actionColocar_elipse,
-            SIGNAL(clicked(bool)),
+            SIGNAL(triggered(bool)),
             this,
             SLOT(put_elipse()));
     connect(ui->actionColocar_esfera,
@@ -86,7 +86,9 @@ void MainWindow::put_box()
 
 void MainWindow::put_elipse()
 {
-
+    ui->widget->Novo_PutEllipsoid(getBoxX(),getBoxY(),getBoxZ());
+    ui->widget->plot_PutEllipsoid();
+    repaint();
 }
 
 void MainWindow::put_esfera()
