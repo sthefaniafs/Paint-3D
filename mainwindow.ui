@@ -152,6 +152,8 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionAlterar_Tamanho_da_Matriz"/>
+   <addaction name="actionSalvar"/>
    <addaction name="actionColocar_Voxel"/>
    <addaction name="actionTirar_Voxel"/>
    <addaction name="actionColocar_Caixa"/>
@@ -222,7 +224,7 @@
   <action name="actionColocar_elipse">
    <property name="icon">
     <iconset resource="Icons.qrc">
-     <normaloff>:/Imagens/Icons/PutSphere.png</normaloff>:/Imagens/Icons/PutSphere.png</iconset>
+     <normaloff>:/Imagens/Icons/PutElipsoide.png</normaloff>:/Imagens/Icons/PutElipsoide.png</iconset>
    </property>
    <property name="text">
     <string>Colocar elipse</string>
@@ -235,6 +237,24 @@
    </property>
    <property name="text">
     <string>Tirar Elipse</string>
+   </property>
+  </action>
+  <action name="actionAlterar_Tamanho_da_Matriz">
+   <property name="icon">
+    <iconset resource="Icons.qrc">
+     <normaloff>:/Imagens/Icons/Tamanho.PNG</normaloff>:/Imagens/Icons/Tamanho.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>Alterar Tamanho da Matriz</string>
+   </property>
+  </action>
+  <action name="actionSalvar">
+   <property name="icon">
+    <iconset resource="Icons.qrc">
+     <normaloff>:/Imagens/Icons/Salvar.PNG</normaloff>:/Imagens/Icons/Salvar.PNG</iconset>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
    </property>
   </action>
  </widget>

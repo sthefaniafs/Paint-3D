@@ -8,5 +8,7 @@
         <file>Icons/PutElipsoide.png</file>
         <file>Icons/PutSphere.png</file>
         <file>Icons/PutVoxel.png</file>
+        <file>Icons/Salvar.PNG</file>
+        <file>Icons/Tamanho.PNG</file>
     </qresource>
 </RCC>

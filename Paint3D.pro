@@ -11,11 +11,13 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    plotter.cpp \
     sculptor.cpp
 
 HEADERS += \
     Voxel.h \
     mainwindow.h \
+    plotter.h \
     sculptor.h
 
 FORMS += \
