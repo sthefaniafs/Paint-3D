@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "sculptor.h"
+#include
 
 class Plotter : public QWidget
 {
@@ -11,6 +12,7 @@ public:
     explicit Plotter(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
     void mudaplano (int _dimz);
+
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;
         float r=0,g=0,b=0;

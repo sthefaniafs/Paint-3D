@@ -1,5 +1,4 @@
 #include "plotter.h"
-#include "sculptor.h"
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
