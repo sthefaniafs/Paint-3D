@@ -3,7 +3,7 @@
 #include "dimensao.h"
 #include <QtDebug>
 #include <QtWidgets>
-
+#include <QAction>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -132,9 +132,9 @@ void MainWindow::abreMatriz()
       }
 }
 
-void MainWindow::mudandoZ(int z){
+void MainWindow::mudandoZ(int _dimz){
 
-    ui->widget->mudaplano(z);
+    ui->widget->mudaplano(_dimz);
 
 }
 
