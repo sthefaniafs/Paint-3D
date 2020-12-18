@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionTirar_Elipse,
             SIGNAL(triggered(bool)),
             this,
-            SLOT(cut_elipsoide()));
+            SLOT(cut_elipse()));
     connect(ui->actionTirar_esfera,
             SIGNAL(triggered(bool)),
             this,
@@ -82,12 +82,12 @@ void MainWindow::fecha()
 
 void MainWindow::put_voxel()
 {
-
+    ui->widget->plot_PutVoxel();
+    repaint();
 }
 
 void MainWindow::put_box()
 {
-    Dimensao d;
     ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
     ui->widget->plot_PutBox();
     repaint();
@@ -109,12 +109,12 @@ void MainWindow::put_esfera()
 
 void MainWindow::cut_voxel()
 {
-
+    ui->widget->plot_CutVoxel();
+    repaint();
 }
 
 void MainWindow::cut_box()
 {
-    Dimensao d;
     ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
     ui->widget->plot_CutBox();
     repaint();
@@ -176,6 +176,21 @@ int MainWindow::getBoxZ()
 {
    return ui->horizontalBZ->value();
 }
+<<<<<<< HEAD
+=======
+float MainWindow:: getCorR()
+{
+    return ui->horizontalSliderVermelho->value();
+}
+float MainWindow:: getCorG()
+{
+    return ui->horizontalSliderVerde->value();
+}
+float MainWindow:: getCorB()
+{
+    return ui->horizontalSliderAzul->value();
+}
+>>>>>>> 770d4fcf0a9dff4f762adb8cb421e96a1ee24404
 int MainWindow::getRaioElipseX()
 {
     return ui->horizontalSliderRaiox->value();
