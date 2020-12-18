@@ -58,6 +58,15 @@ void Plotter:: mudaplano(int _dimz)
     repaint();
 }
 
+void Plotter::mudaSculptor(int s_x, int s_y, int s_z)
+{
+    delete s;
+    nx=s_x;
+    ny=s_y;
+    nz=s_z;
+    s = new Sculptor(nx,ny,nz);
+}
+
 void Plotter::mouseMoveEvent(QMouseEvent *event)
 {
     dimx=event->x();

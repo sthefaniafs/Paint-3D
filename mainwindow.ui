@@ -508,7 +508,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QSlider" name="horizontalSliderBY">
+      <widget class="QSlider" name="horizontalBY">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -544,7 +544,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QSlider" name="horizontalSliderBZ">
+      <widget class="QSlider" name="horizontalBZ">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -891,7 +891,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    </hints>
   </connection>
   <connection>
-   <sender>horizontalSliderBY</sender>
+   <sender>horizontalBY</sender>
    <signal>valueChanged(int)</signal>
    <receiver>lcdNumberRaioyBY</receiver>
    <slot>display(int)</slot>
@@ -907,7 +907,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    </hints>
   </connection>
   <connection>
-   <sender>horizontalSliderBZ</sender>
+   <sender>horizontalBZ</sender>
    <signal>valueChanged(int)</signal>
    <receiver>lcdNumberBZ</receiver>
    <slot>display(int)</slot>

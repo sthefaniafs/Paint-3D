@@ -31,6 +31,9 @@ public slots:
     void abreMatriz(void);
     void salvarOFF();
     void mudandoZ(int z);
+    int getBoxX();
+    int getBoxY();
+    int getBoxZ();
 
 
 private:
