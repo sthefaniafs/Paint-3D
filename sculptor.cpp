@@ -191,7 +191,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
 }
 // Função membro que grava a escultura no arquivo filename com formato OFF
-void Sculptor::writeOFF(char* filename)
+void Sculptor::writeOFF(const char* filename)
 {
     ofstream fout;
     fout.open(filename);

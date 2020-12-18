@@ -24,7 +24,7 @@ class Sculptor
     float getR (int i, int j, int k);
     float getG (int i, int j, int k);
     float getB (int i, int j, int k);
-    void writeOFF(char* filename);
+    void writeOFF(const char* filename);
 };
 
 #endif // SCULPTOR_H
