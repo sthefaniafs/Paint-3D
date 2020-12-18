@@ -2,7 +2,9 @@
 #define PLOTTER_H
 
 #include <QWidget>
+#include <QAction>
 #include "sculptor.h"
+#include <QMouseEvent>
 
 class Plotter : public QWidget
 {
@@ -19,7 +21,7 @@ public:
         int nx=10,ny=10,nz=10;
         int x1=0,y1=0,z1=0;
         int RaioS=0;
-        int xraios=0,yraios=0,zraios=0;
+        int xr=0,yr=0,zr=0;
         bool putvoxel=false;
         bool cutvoxel=false;
         bool putbox=false;

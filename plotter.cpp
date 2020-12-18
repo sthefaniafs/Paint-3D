@@ -1,5 +1,4 @@
 #include "plotter.h"
-#include "sculptor.h"
 #include <QPainter>
 #include <QBrush>
 #include <QPen>
@@ -59,6 +58,46 @@ void Plotter:: mudaplano(int _dimz)
     repaint();
 }
 
+void Plotter::mouseMoveEvent(QMouseEvent *event)
+{
+    dimx=event->x();
+    dimy=event->y();
+    int linha=width()/nx;
+    int coluna=height()/ny;
+    dimx=(dimx/linha);
+    dimy=(dimy/coluna);
+
+    if(putvoxel){
+        s->setColor(r,g,b,1);
+        s->putVoxel(dimx,dimy,dimz);
+    }
+    if(cutvoxel){
+        s->cutVoxel(dimx,dimy,dimz);
+    }
+    if(putbox){
+        s->setColor(r,g,b,1);
+        s->putBox(dimx,dimx+x1-1,dimy,dimy+y1-1,dimz,dimz+z1-1);
+    }
+    if(cutbox){
+        s->cutBox(dimx,dimx+x1,dimy,dimy+y1,dimz,dimz+z1);
+    }
+    if(putsphere){
+        s->setColor(r,g,b,1);
+        s->putSphere(dimx,dimy,dimz,RaioS);
+    }
+    if(cutsphere){
+        s->cutSphere(dimx,dimy,dimz,RaioS);
+    }
+    if(putellipsoid){
+        s->setColor(r,g,b,1);
+        s->putEllipsoid(dimx,dimy,dimz,xr,yr,zr);
+    }
+    if(cutellipsoid){
+        s->cutEllipsoid(dimx,dimy,dimz,xr,yr,zr);
+    }
+    repaint();
+}
+
 void Plotter::mousePressEvent(QMouseEvent *event)
 {
 
@@ -70,32 +109,32 @@ void Plotter::mousePressEvent(QMouseEvent *event)
     dimy=(dimy/coluna);
 
     if(putvoxel){
-        sculptor->setColor(r,g,b,1);
-        sculptor->putVoxel(dx,dy,Dz);
+        s->setColor(r,g,b,1);
+        s->putVoxel(dimx,dimy,dimz);
     }
     if(cutvoxel){
-        sculptor->cutVoxel(dx,dy,Dz);
+        s->cutVoxel(dimx,dimy,dimz);
     }
     if(putbox){
-        sculptor->setColor(r,g,b,1);
-        sculptor->putBox(dx,dx+x1-1,dy,dy+y1-1,Dz,Dz+z1-1);
+        s->setColor(r,g,b,1);
+        s->putBox(dimx,dimx+x1-1,dimy,dimy+y1-1,dimz,dimz+z1-1);
     }
     if(cutbox){
-        sculptor->cutBox(dx,dx+x1,dy,dy+y1,Dz,Dz+z1);
+        s->cutBox(dimx,dimx+x1,dimy,dimy+y1,dimz,dimz+z1);
     }
     if(putsphere){
-        sculptor->setColor(r,g,b,1);
-        sculptor->putSphere(dx,dy,Dz,RaioS);
+        s->setColor(r,g,b,1);
+        s->putSphere(dimx,dimy,dimz,RaioS);
     }
     if(cutsphere){
-        sculptor->cutSphere(dx,dy,Dz,RaioS);
+        s->cutSphere(dimx,dimy,dimz,RaioS);
     }
     if(putellipsoid){
-        sculptor->setColor(r,g,b,1);
-        sculptor->putEllipsoid(dx,dy,Dz,xraios,yraios,zraios);
+        s->setColor(r,g,b,1);
+        s->putEllipsoid(dimx,dimy,dimz,xr,yr,zr);
     }
     if(cutellipsoid){
-        sculptor->cutEllipsoid(dx,dy,Dz,xraios,yraios,zraios);
+        s->cutEllipsoid(dimx,dimy,dimz,xr,yr,zr);
     }
     repaint();
 }
