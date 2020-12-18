@@ -79,6 +79,7 @@ void MainWindow::put_voxel()
 
 void MainWindow::put_box()
 {
+    Dimensao d;
     ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
     ui->widget->plot_PutBox();
     repaint();
@@ -86,14 +87,16 @@ void MainWindow::put_box()
 
 void MainWindow::put_elipse()
 {
-    ui->widget->Novo_PutEllipsoid(getBoxX(),getBoxY(),getBoxZ());
+    ui->widget->Novo_PutEllipsoid(getRaioElipseX(),getRaioElipseY(),getRaioElipseZ());
     ui->widget->plot_PutEllipsoid();
     repaint();
 }
 
 void MainWindow::put_esfera()
 {
-
+    ui->widget->Novo_PutSphere(getRaioSphere());
+    ui->widget->plot_CutSphere();
+    repaint();
 }
 
 void MainWindow::cut_voxel()
