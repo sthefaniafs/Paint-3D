@@ -17,6 +17,15 @@ public:
 
 public slots:
     void fecha();
+    void put_voxel();
+    void put_box();
+    void put_elipse();
+    void put_esfera();
+    void cut_voxel();
+    void cut_box();
+    void cut_elipse();
+    void cut_esfera();
+
 
 private:
     Ui::MainWindow *ui;
