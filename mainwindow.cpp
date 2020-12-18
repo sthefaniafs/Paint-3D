@@ -51,6 +51,10 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(triggered(bool)),
             this,
             SLOT(abreMatriz()));
+    connect(ui->actionSalvar,
+            SIGNAL(triggered(bool)),
+            this,
+            SLOT(salvarOFF()));
     connect(ui->horizontalSliderz,
                 SIGNAL(valueChanged(int)),
                 this,
@@ -130,6 +134,14 @@ void MainWindow::abreMatriz()
       else if (d.exec()== QDialog::Rejected){
          qDebug() << "cancel -> " << d.getZ();
       }
+}
+
+void MainWindow::salvarOFF()
+{
+    QString file=QFileDialog::getSaveFileName();
+    file=file+".off";
+    ui->widget->s->writeOFF(file.toStdString().c_str());
+
 }
 
 void MainWindow::mudandoZ(int _dimz){

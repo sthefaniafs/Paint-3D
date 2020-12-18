@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QString>
+#include <QDialog>
+#include "sculptor.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,6 +29,7 @@ public slots:
     void cut_elipse();
     void cut_esfera();
     void abreMatriz(void);
+    void salvarOFF();
     void mudandoZ(int z);
 
 

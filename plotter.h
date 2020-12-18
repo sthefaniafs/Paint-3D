@@ -3,7 +3,6 @@
 
 #include <QWidget>
 #include "sculptor.h"
-#include
 
 class Plotter : public QWidget
 {

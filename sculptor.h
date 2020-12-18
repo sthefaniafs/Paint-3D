@@ -21,10 +21,10 @@ class Sculptor
     void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
     bool getis0n(int x, int y, int z);
-    void writeOFF(char* filename);
     float getR (int i, int j, int k);
     float getG (int i, int j, int k);
     float getB (int i, int j, int k);
+    void writeOFF(char* filename);
 };
 
 #endif // SCULPTOR_H

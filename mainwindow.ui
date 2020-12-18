@@ -464,7 +464,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
       <x>0</x>
       <y>0</y>
       <width>771</width>
-      <height>401</height>
+      <height>411</height>
      </rect>
     </property>
    </widget>
@@ -594,7 +594,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    <widget class="QLabel" name="labelElipse_2">
     <property name="geometry">
      <rect>
-      <x>900</x>
+      <x>910</x>
       <y>410</y>
       <width>51</width>
       <height>31</height>
@@ -746,7 +746,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
      <normaloff>:/Imagens/Icons/Salvar.PNG</normaloff>:/Imagens/Icons/Salvar.PNG</iconset>
    </property>
    <property name="text">
-    <string>Salvar</string>
+    <string>Salvar como: OFF</string>
    </property>
   </action>
  </widget>
@@ -833,12 +833,12 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>580</x>
-     <y>560</y>
+     <x>611</x>
+     <y>549</y>
     </hint>
     <hint type="destinationlabel">
      <x>760</x>
-     <y>552</y>
+     <y>550</y>
     </hint>
    </hints>
   </connection>
@@ -849,12 +849,12 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>559</x>
-     <y>593</y>
+     <x>590</x>
+     <y>580</y>
     </hint>
     <hint type="destinationlabel">
-     <x>712</x>
-     <y>590</y>
+     <x>760</x>
+     <y>581</y>
     </hint>
    </hints>
   </connection>
@@ -865,12 +865,60 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>556</x>
-     <y>623</y>
+     <x>587</x>
+     <y>611</y>
     </hint>
     <hint type="destinationlabel">
-     <x>706</x>
-     <y>616</y>
+     <x>760</x>
+     <y>612</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalBX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberBX</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>991</x>
+     <y>539</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1021</x>
+     <y>544</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderBY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberRaioyBY</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>975</x>
+     <y>571</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1021</x>
+     <y>577</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderBZ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberBZ</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>945</x>
+     <y>601</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1023</x>
+     <y>604</y>
     </hint>
    </hints>
   </connection>
