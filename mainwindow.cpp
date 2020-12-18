@@ -59,19 +59,6 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(valueChanged(int)),
             this,
             SLOT(mudandoZ(int)));
-    connect(ui->horizontalSliderz,
-            SIGNAL(valueChanged(int)),
-            this,
-            SLOT(mudandoZ(int)));
-    connect(ui->horizontalSliderz,
-            SIGNAL(valueChanged(int)),
-            this,
-            SLOT(mudandoZ(int)));
-    connect(ui->horizontalSliderz,
-            SIGNAL(valueChanged(int)),
-            this,
-            SLOT(mudandoZ(int)));
-
 
 }
 
@@ -92,7 +79,9 @@ void MainWindow::put_voxel()
 
 void MainWindow::put_box()
 {
-
+    ui->widget->Novo_PutBox(getBoxX(),getBoxY(),getBoxZ());
+    ui->widget->plot_PutBox();
+    repaint();
 }
 
 void MainWindow::put_elipse()
@@ -155,15 +144,30 @@ void MainWindow::mudandoZ(int _dimz){
 
 int MainWindow::getBoxX()
 {
-    ui->horizontalBX->value();
+    return ui->horizontalBX->value();
 }
 
 int MainWindow::getBoxY()
 {
-    ui->horizontalBY->value();
+    return ui->horizontalBY->value();
 }
 
 int MainWindow::getBoxZ()
 {
-    ui->horizontalBZ->value();
+    return ui->horizontalBZ->value();
 }
+int MainWindow::getRaioElipseX()
+{
+    return ui->horizontalSliderRaiox->value();
+}
+
+int MainWindow::getRaioElipseY()
+{
+    return ui->horizontalSliderRaioy->value();
+}
+
+int MainWindow::getRaioElipseZ()
+{
+    return ui->horizontalSliderRaioz->value();
+}
+

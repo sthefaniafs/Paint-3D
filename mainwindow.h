@@ -34,6 +34,9 @@ public slots:
     int getBoxX();
     int getBoxY();
     int getBoxZ();
+    int getRaioElipseX();
+    int getRaioElipseY();
+    int getRaioElipseZ();
 
 
 private:

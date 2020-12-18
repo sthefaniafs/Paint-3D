@@ -15,11 +15,21 @@ public:
     void mudaplano (int _dimz);
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
-<<<<<<< HEAD
-
-=======
     void mudaSculptor(int s_x,int s_y, int s_z);
->>>>>>> 913d7dd413a2b12492350dffd567d76288fc3e66
+    void Novo_PutBox(int dx, int dy, int dz);
+    void Novo_PutSphere(int r);
+    void Novo_PutEllipsoid(int raioX, int raioY, int raioZ);
+    void Novo_Plano(int _Dz);
+    void Novo_Colors(int cr, int cg, int cb);
+    void plot_PutVoxel();
+    void plot_CutVoxel();
+    void plot_PutBox();
+    void plot_CutBox();
+    void plot_PutSphere();
+    void plot_CutSphere();
+    void plot_PutEllipsoid();
+    void plot_CutEllipsoid();
+
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;
         float r=0,g=0,b=0;
