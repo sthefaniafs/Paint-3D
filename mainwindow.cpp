@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->actionTirar_Elipse,
             SIGNAL(triggered(bool)),
             this,
-            SLOT(cut_elipsoide()));
+            SLOT(cut_elipse()));
     connect(ui->actionTirar_esfera,
             SIGNAL(triggered(bool)),
             this,
@@ -74,7 +74,8 @@ void MainWindow::fecha()
 
 void MainWindow::put_voxel()
 {
-
+    ui->widget->plot_PutVoxel();
+    repaint();
 }
 
 void MainWindow::put_box()
@@ -86,7 +87,7 @@ void MainWindow::put_box()
 
 void MainWindow::put_elipse()
 {
-    ui->widget->Novo_PutEllipsoid(getBoxX(),getBoxY(),getBoxZ());
+    ui->widget->Novo_PutEllipsoid(getRaioElipseX(),getRaioElipseY(),getRaioElipseZ());
     ui->widget->plot_PutEllipsoid();
     repaint();
 }

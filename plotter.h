@@ -21,7 +21,7 @@ public:
     void Novo_PutSphere(int r);
     void Novo_PutEllipsoid(int raioX, int raioY, int raioZ);
     void Novo_Plano(int _Dz);
-    void Novo_Colors(int cr, int cg, int cb);
+    void Novo_Colors(float cr, float cg, float cb);
     void plot_PutVoxel();
     void plot_CutVoxel();
     void plot_PutBox();

@@ -86,7 +86,7 @@ void Plotter::Novo_PutEllipsoid(int raioX, int raioY, int raioZ)
     zr=raioZ;
 }
 
-void Plotter::Novo_Colors(int nr, int ng, int nb)
+void Plotter::Novo_Colors(float nr, float ng, float nb)
 {
     r=nr;
     g=ng;
