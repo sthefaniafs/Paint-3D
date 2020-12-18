@@ -17,71 +17,21 @@
    <widget class="QPushButton" name="pushButtonQuit">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>540</y>
-      <width>75</width>
+      <x>950</x>
+      <y>550</y>
+      <width>121</width>
       <height>23</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Encerrar Programa</string>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSliderEsfera">
-    <property name="geometry">
-     <rect>
-      <x>820</x>
-      <y>90</y>
-      <width>161</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <property name="tickInterval">
-     <number>1</number>
-    </property>
-   </widget>
-   <widget class="QLCDNumber" name="lcdNumberEsfera">
-    <property name="geometry">
-     <rect>
-      <x>980</x>
-      <y>80</y>
-      <width>81</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-color: rgb(50, 227, 227);
-
-</string>
-    </property>
-    <property name="midLineWidth">
-     <number>0</number>
-    </property>
-    <property name="intValue" stdset="0">
-     <number>1</number>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="plainTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>750</x>
-      <y>10</y>
-      <width>331</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(227, 227, 227);</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelEsfera">
     <property name="geometry">
      <rect>
       <x>890</x>
-      <y>20</y>
+      <y>150</y>
       <width>51</width>
       <height>31</height>
      </rect>
@@ -93,28 +43,421 @@
      <string>Esfera</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelCores">
     <property name="geometry">
      <rect>
-      <x>770</x>
-      <y>90</y>
-      <width>47</width>
-      <height>13</height>
+      <x>890</x>
+      <y>10</y>
+      <width>61</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="text">
-     <string>Raio</string>
+     <string>Cores</string>
     </property>
    </widget>
-   <zorder>plainTextEdit</zorder>
-   <zorder>pushButtonQuit</zorder>
-   <zorder>horizontalSliderEsfera</zorder>
-   <zorder>lcdNumberEsfera</zorder>
-   <zorder>label</zorder>
-   <zorder>label_2</zorder>
+   <widget class="QLabel" name="labelElipse">
+    <property name="geometry">
+     <rect>
+      <x>890</x>
+      <y>260</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Elipse</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>460</y>
+      <width>751</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(217, 217, 217);</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelX">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string> X</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLCDNumber" name="lcdNumberX">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSlider" name="horizontalSliderY">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLCDNumber" name="lcdNumberY">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelZ">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string> Z</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSlider" name="horizontalSliderz">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelY">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string> Y</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLCDNumber" name="lcdNumberZ">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSlider" name="horizontalSliderX">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="labelRegiaoxyz">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>430</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Região</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>30</y>
+      <width>301</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(217, 217, 217);</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelRed">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Vermelho</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSlider" name="horizontalSliderVermelho">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelGreen">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Verde</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSlider" name="horizontalSliderVerde">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelBlue">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Azul</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSlider" name="horizontalSliderAzul">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>180</y>
+      <width>301</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(217, 217, 217);</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelRaio_esfera">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Raio</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSlider" name="horizontalSliderEsfera">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLCDNumber" name="lcdNumberEsfera">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(0, 0, 0);
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>290</y>
+      <width>301</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(217, 217, 217);</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelraiox_elipse">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Raio X</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLCDNumber" name="lcdNumberRaiox">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSlider" name="horizontalSliderRaioy">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLCDNumber" name="lcdNumberRaioy">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelRaioz_elipse">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Raio Z</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSlider" name="horizontalSliderRaioz">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelRaioy_elipse">
+       <property name="styleSheet">
+        <string notr="true">font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+       </property>
+       <property name="text">
+        <string>Raio Y</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLCDNumber" name="lcdNumberRaioz">
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(50, 227, 227);
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+
+</string>
+       </property>
+       <property name="midLineWidth">
+        <number>0</number>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QSlider" name="horizontalSliderRaiox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickInterval">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -249,12 +592,108 @@
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>912</x>
-     <y>176</y>
+     <x>948</x>
+     <y>286</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1018</x>
-     <y>191</y>
+     <x>1036</x>
+     <y>291</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderRaiox</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberRaiox</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>985</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1024</x>
+     <y>396</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderRaioy</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberRaioy</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>951</x>
+     <y>417</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1009</x>
+     <y>418</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderRaioz</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberRaioz</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>907</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1021</x>
+     <y>457</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberX</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>580</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>552</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberY</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>559</x>
+     <y>593</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>712</x>
+     <y>590</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderz</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumberZ</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>556</x>
+     <y>623</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>706</x>
+     <y>616</y>
     </hint>
    </hints>
   </connection>
