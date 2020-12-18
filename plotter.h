@@ -11,6 +11,8 @@ public:
     explicit Plotter(QWidget *parent = nullptr);
     void paintEvent(QPaintEvent *event);
     void mudaplano (int _dimz);
+    void mouseMoveEvent(QMouseEvent *event);
+    void mousePressEvent(QMouseEvent *event);
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;
         float r=0,g=0,b=0;

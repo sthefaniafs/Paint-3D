@@ -58,3 +58,44 @@ void Plotter:: mudaplano(int _dimz)
     dimz=_dimz;
     repaint();
 }
+
+void Plotter::mousePressEvent(QMouseEvent *event)
+{
+
+    dimx=event->x();
+    dimy=event->y();
+    int linha=width()/nx;
+    int coluna=height()/ny;
+    dimx=(dimx/linha);
+    dimy=(dimy/coluna);
+
+    if(putvoxel){
+        sculptor->setColor(r,g,b,1);
+        sculptor->putVoxel(dx,dy,Dz);
+    }
+    if(cutvoxel){
+        sculptor->cutVoxel(dx,dy,Dz);
+    }
+    if(putbox){
+        sculptor->setColor(r,g,b,1);
+        sculptor->putBox(dx,dx+x1-1,dy,dy+y1-1,Dz,Dz+z1-1);
+    }
+    if(cutbox){
+        sculptor->cutBox(dx,dx+x1,dy,dy+y1,Dz,Dz+z1);
+    }
+    if(putsphere){
+        sculptor->setColor(r,g,b,1);
+        sculptor->putSphere(dx,dy,Dz,RaioS);
+    }
+    if(cutsphere){
+        sculptor->cutSphere(dx,dy,Dz,RaioS);
+    }
+    if(putellipsoid){
+        sculptor->setColor(r,g,b,1);
+        sculptor->putEllipsoid(dx,dy,Dz,xraios,yraios,zraios);
+    }
+    if(cutellipsoid){
+        sculptor->cutEllipsoid(dx,dy,Dz,xraios,yraios,zraios);
+    }
+    repaint();
+}
