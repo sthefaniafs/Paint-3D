@@ -16,8 +16,7 @@ public:
     void mouseMoveEvent(QMouseEvent *event);
     void mousePressEvent(QMouseEvent *event);
     void mudaSculptor(int s_x,int s_y, int s_z);
-<<<<<<< HEAD
-=======
+
     void Novo_PutBox(int dx, int dy, int dz);
     void Novo_PutSphere(int r);
     void Novo_PutEllipsoid(int raioX, int raioY, int raioZ);
@@ -31,7 +30,6 @@ public:
     void plot_CutSphere();
     void plot_PutEllipsoid();
     void plot_CutEllipsoid();
->>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
 
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;

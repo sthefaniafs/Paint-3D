@@ -144,25 +144,16 @@ void MainWindow::mudandoZ(int _dimz){
 
 int MainWindow::getBoxX()
 {
-<<<<<<< HEAD
    return ui->horizontalBX->value();
-=======
-    return ui->horizontalBX->value();
->>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
 }
 
 int MainWindow::getBoxY()
 {
-<<<<<<< HEAD
    return ui->horizontalBY->value();
-=======
-    return ui->horizontalBY->value();
->>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
 }
 
 int MainWindow::getBoxZ()
 {
-<<<<<<< HEAD
    return ui->horizontalBZ->value();
 }
 int MainWindow:: getCorR()
@@ -176,13 +167,10 @@ int MainWindow:: getCorG()
 int MainWindow:: getCorB()
 {
     return ui->horizontalSliderAzul->value();
-=======
-    return ui->horizontalBZ->value();
 }
 int MainWindow::getRaioElipseX()
 {
     return ui->horizontalSliderRaiox->value();
->>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
 }
 
 int MainWindow::getRaioElipseY()
@@ -194,4 +182,7 @@ int MainWindow::getRaioElipseZ()
 {
     return ui->horizontalSliderRaioz->value();
 }
-
+void MainWindow::bota_cor()
+{
+    ui->widget->Novo_Colors(getCorR(),getCorG(),getCorB());
+}

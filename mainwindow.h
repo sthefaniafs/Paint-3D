@@ -34,16 +34,13 @@ public slots:
     int getBoxX();
     int getBoxY();
     int getBoxZ();
-<<<<<<< HEAD
     int getCorR();
     int getCorG();
     int getCorB();
-=======
     int getRaioElipseX();
     int getRaioElipseY();
     int getRaioElipseZ();
-
->>>>>>> 714ad3309cfb12bff570d95b7b2692a692170591
+    void bota_cor();
 
 private:
     Ui::MainWindow *ui;
