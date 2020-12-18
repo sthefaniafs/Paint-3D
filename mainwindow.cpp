@@ -51,10 +51,26 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(triggered(bool)),
             this,
             SLOT(abreMatriz()));
+    connect(ui->actionSalvar,
+            SIGNAL(triggered(bool)),
+            this,
+            SLOT(salvarOFF()));
     connect(ui->horizontalSliderz,
-                SIGNAL(valueChanged(int)),
-                this,
-                SLOT(mudandoZ(int)));
+            SIGNAL(valueChanged(int)),
+            this,
+            SLOT(mudandoZ(int)));
+    connect(ui->horizontalSliderz,
+            SIGNAL(valueChanged(int)),
+            this,
+            SLOT(mudandoZ(int)));
+    connect(ui->horizontalSliderz,
+            SIGNAL(valueChanged(int)),
+            this,
+            SLOT(mudandoZ(int)));
+    connect(ui->horizontalSliderz,
+            SIGNAL(valueChanged(int)),
+            this,
+            SLOT(mudandoZ(int)));
 
 
 }
@@ -123,6 +139,14 @@ void MainWindow::abreMatriz()
     }
 }
 
+void MainWindow::salvarOFF()
+{
+    QString file=QFileDialog::getSaveFileName();
+    file=file+".off";
+    ui->widget->s->writeOFF(file.toStdString().c_str());
+
+}
+
 void MainWindow::mudandoZ(int _dimz){
 
     ui->widget->mudaplano(_dimz);
@@ -131,15 +155,15 @@ void MainWindow::mudandoZ(int _dimz){
 
 int MainWindow::getBoxX()
 {
-    ui->spinBoxBoxX->value();
+    ui->horizontalBX->value();
 }
 
 int MainWindow::getBoxY()
 {
-    ui->spinBoxBoxY->value();
+    ui->horizontalBY->value();
 }
 
 int MainWindow::getBoxZ()
 {
-    ui->spinBoxBoxZ->value();
+    ui->horizontalBZ->value();
 }
