@@ -34,7 +34,9 @@ public slots:
     int getBoxX();
     int getBoxY();
     int getBoxZ();
-
+    int getCorR();
+    int getCorG();
+    int getCorB();
 
 private:
     Ui::MainWindow *ui;

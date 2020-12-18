@@ -134,7 +134,7 @@ void MainWindow::abreMatriz()
                ui->horizontalSliderz->setMaximum(d.getZ());
                repaint();
            }else{
-               QMessageBox::information(this, tr("Vixi deu errado"),tr("\nAs dimensões precisam ser maiores que 0, tente outra vez!\n"));
+               QMessageBox::information(this, tr("Vixi, deu errado"),tr("\nAs dimensões precisam ser maiores que 0, tente outra vez!\n"));
            }
     }
 }
@@ -155,15 +155,27 @@ void MainWindow::mudandoZ(int _dimz){
 
 int MainWindow::getBoxX()
 {
-    ui->horizontalBX->value();
+   return ui->horizontalBX->value();
 }
 
 int MainWindow::getBoxY()
 {
-    ui->horizontalBY->value();
+   return ui->horizontalBY->value();
 }
 
 int MainWindow::getBoxZ()
 {
-    ui->horizontalBZ->value();
+   return ui->horizontalBZ->value();
+}
+int MainWindow:: getCorR()
+{
+    return ui->horizontalSliderVermelho->value();
+}
+int MainWindow:: getCorG()
+{
+    return ui->horizontalSliderVerde->value();
+}
+int MainWindow:: getCorB()
+{
+    return ui->horizontalSliderAzul->value();
 }

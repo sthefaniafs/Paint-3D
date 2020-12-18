@@ -242,6 +242,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
        <property name="styleSheet">
         <string notr="true"/>
        </property>
+       <property name="maximum">
+        <number>1</number>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -259,6 +262,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
      </item>
      <item row="1" column="1">
       <widget class="QSlider" name="horizontalSliderVerde">
+       <property name="maximum">
+        <number>1</number>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -276,6 +282,9 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;
      </item>
      <item row="2" column="1">
       <widget class="QSlider" name="horizontalSliderAzul">
+       <property name="maximum">
+        <number>1</number>
+       </property>
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
