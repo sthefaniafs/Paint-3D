@@ -36,7 +36,7 @@ public:
     Sculptor *s;
         int dimx=0, dimy=0, dimz=0;
         float r=0,g=0,b=0;
-        int nx=100,ny=100,nz=100;
+        int nx=30,ny=30,nz=30;
         int x1=0,y1=0,z1=0;
         int RaioS=0;
         int xr=0,yr=0,zr=0;

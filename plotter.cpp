@@ -5,7 +5,7 @@
 
 Plotter::Plotter(QWidget *parent) : QWidget(parent)
 {
-    s = new Sculptor (100,100,100);
+    s = new Sculptor (30,30,30);
 }
 
     void Plotter::paintEvent(QPaintEvent *event)

@@ -34,4 +34,3 @@ struct Voxel {
 };
 
 #endif // VOXEL_H
-

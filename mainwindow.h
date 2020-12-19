@@ -38,12 +38,6 @@ public slots:
     int getBoxX();
     int getBoxY();
     int getBoxZ();
-<<<<<<< HEAD
-=======
-    float getCorR();
-    float getCorG();
-    float getCorB();
->>>>>>> 770d4fcf0a9dff4f762adb8cb421e96a1ee24404
     int getRaioElipseX();
     int getRaioElipseY();
     int getRaioElipseZ();

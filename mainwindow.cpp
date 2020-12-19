@@ -176,21 +176,6 @@ int MainWindow::getBoxZ()
 {
    return ui->horizontalBZ->value();
 }
-<<<<<<< HEAD
-=======
-float MainWindow:: getCorR()
-{
-    return ui->horizontalSliderVermelho->value();
-}
-float MainWindow:: getCorG()
-{
-    return ui->horizontalSliderVerde->value();
-}
-float MainWindow:: getCorB()
-{
-    return ui->horizontalSliderAzul->value();
-}
->>>>>>> 770d4fcf0a9dff4f762adb8cb421e96a1ee24404
 int MainWindow::getRaioElipseX()
 {
     return ui->horizontalSliderRaiox->value();
